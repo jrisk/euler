@@ -6,6 +6,7 @@
 
 //This version of Problem 3 is way, way faster
 var v1 = process.hrtime();
+//run in node
 
 var bigNum = 600851475143;
 

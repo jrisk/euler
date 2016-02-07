@@ -3,7 +3,6 @@
 //What is the largest prime factor of the number 600851475143 ?
 //a prime is a number who is only divisible by 1 and itself
 //a prime factor is a prime that is a factor of another number
-var v1 = process.hrtime();
 
 var bigNum = 600851475;
 
@@ -34,7 +33,4 @@ for (i = 2; i < bigNum; i++) {
 
 var LargestPrimeFactor = Primes.pop();
 
-var v2 = process.hrtime(v1);
-
 console.log(LargestPrimeFactor);
-console.log(v2);

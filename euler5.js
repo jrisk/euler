@@ -6,17 +6,26 @@ of the numbers from 1 to 10 without any remainder.
 What is the smallest positive number that is 
 evenly divisible by all of the numbers from 1 to 20? */
 
-for (j = 0; ; j++) {
+var number = 2;
 
-for (i = 0, j = 0; i < 20; i++) {
+function divisorSmall() {
 
-	var product = i * j;
-	
-	if ((i * j) % i == 0) {
-		console.log(product + " is divisible by " + i);
+	while (number > 1) {
+
+		for (i = 1; i <= 20; i++) {
+			
+			if (number % i == 0) {
+				if (i == 20) {
+					return number + " is the smallest number divisible by the numbers 1 thru 20";
+				}
+			}
+			else {
+				number++;
+				break;
+			}
+		}
 	}
-}
+	return 0;
+};
 
-}
-
-
+console.log(divisorSmall());

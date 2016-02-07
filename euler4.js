@@ -1,9 +1,6 @@
 //Euler 4: Palindrome Numbers 
 
 //Find the largest palindrome made from the product of two 3-digit numbers
-var start = process.hrtime();
-//run in node
-//took 45ms
 
 function getPal() {
 
@@ -50,4 +47,3 @@ function testPal() {
 
 testPal();
 console.log("largest palindrome is: " + getPal());
-console.log(process.hrtime(start));

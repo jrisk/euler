@@ -1,38 +1,40 @@
-/* Euler 3: Prime Factors
+//Euler 3: Prime Factors
 
-What is the largest prime factor of the number 600851475143 ? */
+//What is the largest prime factor of the number 600851475143 ?
+//a prime is a number who is only divisible by 1 and itself
+//a prime factor is a prime that is a factor of another number
+var v1 = process.hrtime();
 
-
-var bigNum = 600851475143;
-
-var Factors = [];
+var bigNum = 600851475;
 
 var Primes = [];
 
-for (i = 2; i < bigNum; i++) {
+var Factors = [];
 
-	var isPrime = 0;
+for (i = 2; i < bigNum; i++) {
 
 	if (bigNum % i == 0) {
 
 		Factors.push(i);
 
-		for (j = 2; j < i; j++) {
+		//find if that factor is a prime number
 
-			if (i % j == 0) {
-				isPrime = 1;
+		testPrime: {
+
+			for (j = 2; j < i; j++) {
+
+				if (i % j == 0) {
+					break testPrime;
+					}
 				}
+			Primes.push(i);
 			}
-			
-		if (isPrime == 0) {
-		Primes.push(i);
 		}
-	}
-
-};
-
-console.log(Primes);
+}
 
 var LargestPrimeFactor = Primes.pop();
 
+var v2 = process.hrtime(v1);
+
 console.log(LargestPrimeFactor);
+console.log(v2);

@@ -1,7 +1,7 @@
 //Euler 4: Palindrome Numbers 
 
 //Find the largest palindrome made from the product of two 3-digit numbers
-//700% faster when you start from 999 (finding the largest, first find will be correct);
+//700% faster when you start from 999 (finding the largest, first find will be correct); 100ms
 
 function getPal() {
 
